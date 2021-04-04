@@ -11,5 +11,5 @@ class Employee extends Model
     use HasFactory;
 
     protected $table = 'employees';
-    protected $fillabe = ['name', 'email', 'post', 'image'];
+    protected $fillabe = ['name', 'surname',  'email',  'photo'];
 }

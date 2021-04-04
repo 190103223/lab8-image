@@ -14,23 +14,22 @@ class EmployeeController extends Controller
     public function store(Request $request){
         $employee = new Employee();
 
-        
-
         $employee->name = $request->input('name');
+        $employee->surname = $request->input('surname');
         $employee->email = $request->input('email');
-        $employee->post = $request->input('post');
+      
         
         
-        if($request->hasFile('image')){
-            $file = $request->file('image');
+        if($request->hasFile('photo')){
+            $file = $request->file('photo');
             $extension = $file->getClientOriginalExtension();
             $filename = time().'.'.$extension;
             $file->move('uploads/employee/', $filename);
-            $employee->image=$filename;
+            $employee->photo=$filename;
         }
         else{
             return $request;
-            $employee->image='';
+            $employee->photo='';
         }
         
         $employee->save();

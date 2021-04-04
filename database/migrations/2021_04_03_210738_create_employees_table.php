@@ -18,9 +18,9 @@ class CreateEmployeesTable extends Migration
         Schema::create('employees', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('surname');
             $table->string('email');
-            $table->string('post');
-            $table->mediumText('image')->nullable();
+            $table->mediumText('photo')->nullable();
             $table->timestamps();
         });
     }

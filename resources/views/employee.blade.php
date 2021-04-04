@@ -9,25 +9,24 @@
 </head>
 <body>
     <div class="container">
-        <div class="jumbotron">
+        <div class="" style="margin: 100px">
             <form action="{{ route('addimage') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-                <div class="form-group">
+                <div class="form-group" >
                     <label for="">Name</label>
                     <input type="text" name="name" id="" class="form-control" placeholder="Enter name...">
+                </div>
+                <div class="form-group">
+                    <label for="">Surname</label>
+                    <input type="text" name="surname" id="" class="form-control" placeholder="Enter surname...">
                 </div>
                 <div class="form-group">
                     <label for="">Email</label>
                     <input type="email" name="email" id="" class="form-control" placeholder="Enter email...">
                 </div>
-                <div class="form-group">
-                    <label for="">Post</label>
-                    <input type="text" name="post" id="" class="form-control" placeholder="Enter post...">
-                </div>
-    
                 <div class="input-group">
                     <div class="custom-file">
-                        <input type="file" class="custom-file-input" name="image" id="">
+                        <input type="file" class="custom-file-input" name="photo" id="" value="null">
                         <label for="" class="custom-file-label">Choose File</label>
                     </div>
                 </div>
